@@ -10,7 +10,7 @@ use yii\widgets\Breadcrumbs;
 use yii\widgets\ActiveForm;
 use app\assets\AppAsset;
 //use app\components\PostOthers;
-//use app\models\SearchForm;
+use app\models\SearchForm;
 
 AppAsset::register($this);
 
@@ -67,7 +67,7 @@ $action = Yii::$app->controller->action->id;
         <table>
             <tr>
                 <td>
-                     //$form->field($model, 'q')->label('')->textInput(['class' => 'input'])
+                    <!-- //$form->field($model, 'q')->label('')->textInput(['class' => 'input']) ?>-->
                 </td>
                 <td>
                     <input type="image" src="/web/images/button_search.png" class="icon_button" alt="Поиск" />
@@ -393,7 +393,7 @@ $action = Yii::$app->controller->action->id;
 </div>
 </div>
 
-<?php $this->endBody() ?>
+<?php $this->endBody(); ?>
 </body>
 </html>
-<?php $this->endPage() ?>
+<?php $this->endPage(); ?>

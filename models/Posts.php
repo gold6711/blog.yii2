@@ -8,12 +8,13 @@
 
 namespace app\models;
 
+use Yii;
 use yii\db\ActiveRecord;
-
 
 class Posts extends ActiveRecord
 {
     public $number;
+    public $link;
 
     public function afterFind() {
         $monthes = [
@@ -49,8 +50,8 @@ class Posts extends ActiveRecord
     }
 
 
-    public static function setNumbers($post) {
-        $all_reeases = Post::find()->where(['is_release'=>1])->orderBy("date")->all();
+    public static function setNumbers($posts) {
+        $all_reeases = Posts::find()->where(['is_release'=>1])->orderBy("date")->all();
         $number = 1;
         foreach($all_reeases as $release) {
             foreach($posts as $post) {
