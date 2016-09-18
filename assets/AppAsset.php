@@ -18,12 +18,18 @@ class AppAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-        'css/site.css',
+        'css/ie.css',
     ];
+
+    public $cssOptions = ['condition' => 'lte IE8'];
+
     public $js = [
+        'web/js/functions.js',
+        '//vk.com/js/api/openapi.js?121',
+
     ];
     public $depends = [
-        'yii\web\YiiAsset',
-        'yii\bootstrap\BootstrapAsset',
+        'app\assets\MyAppAsset'
+
     ];
 }
