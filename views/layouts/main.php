@@ -2,7 +2,9 @@
 
 /* @var $this \yii\web\View */
 /* @var $content string */
-
+namespace app\components;
+namespace app\models;
+use Yii;
 use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
@@ -11,6 +13,11 @@ use yii\widgets\ActiveForm;
 use app\assets\AppAsset;
 //use app\components\PostOthers;
 use app\models\SearchForm;
+use yii\db\ActiveRecord;
+use yii\base\Widget;
+use app\models\Posts;
+use \app\components\PostOthers;
+use \app\controllers\SiteController;
 
 AppAsset::register($this);
 
@@ -33,7 +40,7 @@ $action = Yii::$app->controller->action->id;
 <div id="bg">
 <div id="container">
 <div id="header">
-    <img src="/web/images/header.png" alt="Шапка сайта" />
+    <img src="../../web/images/header.png" alt="Шапка сайта" />
 </div>
 <div id="topmenu">
     <ul>
@@ -67,10 +74,11 @@ $action = Yii::$app->controller->action->id;
         <table>
             <tr>
                 <td>
-                    <!-- //$form->field($model, 'q')->label('')->textInput(['class' => 'input']) ?>-->
+                    <?php $model = new SearchForm();?>
+                    <?= $form->field($model, 'q')->label('')->textInput(['class' => 'input']) ?>
                 </td>
                 <td>
-                    <input type="image" src="/web/images/button_search.png" class="icon_button" alt="Поиск" />
+                    <input type="image" src="../../web/images/button_search.png" class="icon_button" alt="Поиск" />
                 </td>
             </tr>
         </table>
@@ -89,7 +97,7 @@ $action = Yii::$app->controller->action->id;
     <?php if ($action == "index") { ?>
         <div id="author">
             <h3>Михаил Русаков</h3>
-            <img src="/web/images/mr.png" alt="Михаил Русаков" />
+            <img src="../../web/images/mr.png" alt="Михаил Русаков" />
             <br />
             <a href="<?=Yii::$app->urlManager->createUrl(["site/author"])?>">Об авторе</a>
         </div>
