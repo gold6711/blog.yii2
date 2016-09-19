@@ -789,3 +789,4 @@
 127.0.0.1 - - [19/Sep/2016:02:34:56 +0300] "GET /images/footer.png HTTP/1.1" 304 0 "http://blog/site/index" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36"
 127.0.0.1 - - [19/Sep/2016:02:34:56 +0300] "GET /web/images/button_search.png HTTP/1.1" 500 43044 "http://blog/site/index" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36"
 127.0.0.1 - - [19/Sep/2016:02:34:56 +0300] "GET /web/images/button_search.png HTTP/1.1" 500 43044 "http://blog/site/index" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36"
+127.0.0.1 - - [19/Sep/2016:02:43:12 +0300] "GET /site/author HTTP/1.1" 500 43044 "http://blog/site/index" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36"
