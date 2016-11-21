@@ -38,7 +38,7 @@ class Posts extends ActiveRecord
     private function youtube($text) {
         if (strpos($text, "youtube") === false) return $text;
         $reg = "/{youtube:([\w-_]*)?,(\d*)?,(\d*)?}/i";
-        $text = preg_replace($reg, str_replace(array("%name%", "%width%", "%height%"), array("\\1", "\\2", "\\3"), file_get_contents(Yii::$app->basePath.Yii::$app->params["dir_tmpl"]."youtube.tpl")), $text);
+        $text = preg_replace($reg, str_replace(array("%name%", "%width%", "%height%"), array("\\1", "\\2", "\\3"), file_get_contents(Yii::$app->basePath.Yii::$app->params["dir_tmpl"]."/youtube.tpl")), $text);
         return $text;
     }
 
